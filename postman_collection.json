@@ -1,0 +1,18 @@
+{
+  "info": {
+    "name": "LogiTech Express API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [{"key":"baseUrl","value":"http://localhost:3000"}],
+  "item": [
+    {"name":"Health","request":{"method":"GET","url":"{{baseUrl}}/health"}},
+    {"name":"Listar motoristas","request":{"method":"GET","url":"{{baseUrl}}/api/motoristas"}},
+    {"name":"Criar motorista","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"nome\": \"Carlos Souza\",\n  \"cpf\": \"33333333333\",\n  \"cnh\": \"BR123123123\",\n  \"telefone\": \"49999992222\",\n  \"email\": \"carlos@logitech.local\"\n}"},"url":"{{baseUrl}}/api/motoristas"}},
+    {"name":"Listar veículos","request":{"method":"GET","url":"{{baseUrl}}/api/veiculos"}},
+    {"name":"Listar rotas","request":{"method":"GET","url":"{{baseUrl}}/api/rotas"}},
+    {"name":"Listar coletas","request":{"method":"GET","url":"{{baseUrl}}/api/coletas"}},
+    {"name":"Listar entregas","request":{"method":"GET","url":"{{baseUrl}}/api/entregas"}},
+    {"name":"Atualizar status da entrega","request":{"method":"PATCH","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"status\": \"EM_TRANSITO\"\n}"},"url":"{{baseUrl}}/api/entregas/1/status"}},
+    {"name":"Listar itens/estoque","request":{"method":"GET","url":"{{baseUrl}}/api/itens"}}
+  ]
+}
